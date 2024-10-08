@@ -1,6 +1,9 @@
-
+"use client";
 import React, {useState, ChangeEvent} from "react";
-import TextArea from '@/Components/Inputs/TextArea'
+import TextArea from '@/Components/Inputs/TextArea';
+import SpeechRecognitionComponent from '@/Components/SpeechRecognition/SpeechRecognition'
+
+
 
 
 export default function Home() {
@@ -27,6 +30,13 @@ export default function Home() {
           }}
           placeholder="Source Language"
           />
+          <div className="flex flex-row justify-between w-full ">
+            <span className="cursor-pointer flex space-x-2 flex-row">
+              <SpeechRecognitionComponent setSourceText={setSourceText} />
+
+            </span>
+
+          </div>
          
                 </div>
               </div>
